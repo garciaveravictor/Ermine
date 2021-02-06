@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600" prefWidth="800" styleClass="habitacion" stylesheets="@mainwindow.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apphotel.ViewReservasHabitacionesController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="600" prefWidth="800" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="560.0">
+               <children>
+                  <Label styleClass="titulo" text="Datos del cliente" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="638.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="57.0" text="DNI/CIF: " textFill="WHITE" />
+                  <TextField fx:id="tf_dni" prefHeight="27.0" prefWidth="245.0" styleClass="tf">
+                     <tooltip>
+                        <Tooltip text="Formato DNI: 12345678A" />
+                     </tooltip></TextField>
+                  <Label text="Nombre:" textFill="WHITE" />
+                  <TextField fx:id="tf_nombre" prefHeight="27.0" prefWidth="361.0" styleClass="tf">
+                     <tooltip>
+                        <Tooltip text="Introduzca su nombre. Ej: Uriel Jímenez García" />
+                     </tooltip></TextField>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="65.0" prefWidth="623.0" spacing="10.0">
+               <children>
+                  <Label text="Dirección: " textFill="WHITE">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="tf_direccion" prefHeight="27.0" prefWidth="245.0" styleClass="tf">
+                     <tooltip>
+                        <Tooltip text="Recuerde indicar: Calle C/, Avenida Avd/ ,  Paseo p.º , plaza plza/" />
+                     </tooltip></TextField>
+                  <Label text="Localidad: " textFill="WHITE" />
+                  <TextField fx:id="tf_localidad" prefHeight="27.0" prefWidth="353.0" styleClass="tf">
+                     <tooltip>
+                        <Tooltip text="Respete las mayúsculas y tildes. Ej: Coín" />
+                     </tooltip></TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="65.0" prefWidth="725.0" spacing="15.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="53.0" text="Teléfono:" textFill="WHITE" />
+                  <TextField fx:id="tf_Telefono" prefHeight="27.0" prefWidth="243.0" styleClass="tf">
+                     <tooltip>
+                        <Tooltip text="Formato Teléfono: 123456789" />
+                     </tooltip></TextField>
+                  <Label text="Provincia: " textFill="WHITE" />
+                  <ComboBox fx:id="cb_Provincia" prefHeight="31.0" prefWidth="345.0" styleClass="comboB" />
+               </children>
+               <cursor>
+                  <Cursor fx:constant="SW_RESIZE" />
+               </cursor>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="560.0">
+               <children>
+                  <Label styleClass="titulo" text="Datos de la reserva" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="61.0" prefWidth="764.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="16.0" prefWidth="103.0" text="Fecha de llegada:" textFill="WHITE" />
+                  <DatePicker fx:id="dp_llegada" prefHeight="25.0" prefWidth="211.0" promptText="Fecha de llegada" styleClass="comboB">
+                     <tooltip>
+                        <Tooltip text="Porfavor, indique la fecha a la que espera llegar." />
+                     </tooltip></DatePicker>
+                  <Label prefHeight="17.0" prefWidth="94.0" text="Fecha de salida:" textFill="WHITE" />
+                  <DatePicker fx:id="dp_salida" prefHeight="25.0" prefWidth="211.0" promptText="Fecha de salida" styleClass="comboB">
+                     <tooltip>
+                        <Tooltip text="Porfavor, indique hasta cuando estará con nosotros." />
+                     </tooltip></DatePicker>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="702.0" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="144.0" text="Número de habitaciones: " textFill="WHITE" />
+                  <Spinner fx:id="sp_numerohabitaciones" prefHeight="25.0" prefWidth="58.0">
+                     <tooltip>
+                        <Tooltip text="No dude en indicar la cantidad de habitaciones que necesite." />
+                     </tooltip>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Spinner>
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="238.0" text="Tipo de habitación: " textFill="WHITE" />
+                  <ComboBox fx:id="cb_tipohabitacion" prefHeight="25.0" prefWidth="117.0" styleClass="comboB">
+                     <tooltip>
+                        <Tooltip text="Ofrecemos gran variedad de habitaciones ajustandose a sus necesidades." />
+                     </tooltip>
+                  </ComboBox>
+               </children>
+               <VBox.margin>
+                  <Insets right="50.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="20.0" prefWidth="369.0" spacing="15.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="50.0" text="Régimen:" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Alojamiento y desayuno: Habitacion de media tarde/noche y desayuno hasta las 12.00 am. Media Pension: Habtiacion dia completo (sin comidas o buffets). Pension Completa: Todo incluido, habitacion y comidas ademas de actividades de recinto." />
+                     </tooltip>
+                  </Label>
+                  <CheckBox fx:id="ckb_fumador" mnemonicParsing="false" prefHeight="17.0" prefWidth="151.0" styleClass="ckeckB" text="Fumador" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="310.0" />
+                     </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="Ofrecemos servicio para fumadores. Recuerde cuidar su salud." />
+                     </tooltip>
+                  </CheckBox>
+               </children>
+               <padding>
+                  <Insets right="50.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="44.0" prefWidth="729.0" spacing="100.0">
+               <children>
+                  <VBox prefHeight="54.0" prefWidth="244.0" spacing="6.0">
+                     <children>
+                        <RadioButton fx:id="rb_mediapension" mnemonicParsing="false" prefHeight="14.0" prefWidth="104.0" styleClass="radiob" text="Media pensión" textFill="WHITE">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="tg_RadioButton" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="rb_pensioncompleta" mnemonicParsing="false" prefHeight="15.0" prefWidth="160.0" styleClass="radiob" text="Pensión completa" textFill="WHITE" toggleGroup="$tg_RadioButton" />
+                        <RadioButton fx:id="rb_alojamiento" mnemonicParsing="false" styleClass="radiob" text="Alojamiento y desayuno" textFill="WHITE" toggleGroup="$tg_RadioButton" />
+                     </children>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </VBox>
+                  <Label prefHeight="63.0" prefWidth="204.0" text="En virtud de la ley de sanidad se informa a los clientes que solo podrán fumar en las habitaciones reservadas para tal fin." textFill="WHITE" wrapText="true" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="560.0" spacing="15.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onActionButtonLimpiar" text="Limpiar" />
+                  <Button mnemonicParsing="false" onAction="#onActionButtonAceptar" text="Aceptar">
+                     <HBox.margin>
+                        <Insets left="500.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onActionButtonCancelar" text="Cancelar" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="127.0" prefWidth="620.0">
+               <children>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="14.0" prefWidth="600.0">
+                     <children>
+                        <Label text="Datos del cliente" underline="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets right="400.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="39.0" prefWidth="600.0" spacing="15.0">
+                     <children>
+                        <Label text="DNI: " />
+                        <TextField prefHeight="25.0" prefWidth="103.0">
+                           <tooltip>
+                              <Tooltip text="Example Tool Tip" />
+                           </tooltip></TextField>
+                        <Button mnemonicParsing="false" text="Buscar" />
+                        <Label text="Nombre: " />
+                        <TextField prefHeight="25.0" prefWidth="193.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets right="70.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0" spacing="15.0">
+                     <children>
+                        <Label text="Dirección: " />
+                        <TextField prefHeight="25.0" prefWidth="173.0" />
+                        <Label text="Teléfono: " />
+                        <TextField prefHeight="25.0" prefWidth="133.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets right="100.0" />
+                     </padding>
+                  </HBox>
+                  <Separator prefHeight="11.0" prefWidth="600.0" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="241.0" prefWidth="600.0">
+               <children>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="10.0" prefWidth="620.0">
+                     <children>
+                        <Label text="Datos de la reserva" underline="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets right="400.0" />
+                     </padding>
+                  </HBox>
+                  <Label alignment="CENTER" text="Tipo de evento">
+                     <VBox.margin>
+                        <Insets right="450.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="86.0" prefWidth="620.0">
+                     <children>
+                        <GridPane alignment="CENTER" prefHeight="81.0" prefWidth="619.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="116.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.0" minWidth="10.0" prefWidth="160.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="359.0" minWidth="10.0" prefWidth="52.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="359.0" minWidth="10.0" prefWidth="134.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="359.0" minWidth="10.0" prefWidth="161.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <RadioButton mnemonicParsing="false" prefHeight="27.0" prefWidth="153.0" text="Banquete" />
+                              <RadioButton mnemonicParsing="false" text="Jornada" GridPane.rowIndex="1" />
+                              <RadioButton mnemonicParsing="false" text="Congreso" GridPane.rowIndex="2" />
+                              <Label prefHeight="17.0" prefWidth="156.0" text="Número de personas" GridPane.columnIndex="1">
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </Label>
+                              <CheckBox mnemonicParsing="false" text="¿Necesitas Habitaciones?" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField prefHeight="25.0" prefWidth="260.0" GridPane.columnIndex="2" />
+                              <Label text="Tipo de Cocina" GridPane.columnIndex="3">
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <ComboBox prefWidth="150.0" GridPane.columnIndex="4">
+                                 <GridPane.margin>
+                                    <Insets left="25.0" />
+                                 </GridPane.margin>
+                              </ComboBox>
+                              <HBox prefHeight="27.0" prefWidth="149.0" spacing="20.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label text="¿Cuantas?" />
+                                    <TextField prefHeight="25.0" prefWidth="41.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="56.0" prefWidth="620.0">
+                     <children>
+                        <ImageView fitHeight="51.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="47.0" prefWidth="620.0" spacing="20.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="Limpiar">
+                           <HBox.margin>
+                              <Insets right="100.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Aceptar">
+                           <HBox.margin>
+                              <Insets left="200.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Cancelar" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="fondo" stylesheets="@mainwindow.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apphotel.MainWindowController">
+   <children>
+      <VBox alignment="TOP_RIGHT" prefHeight="600.0" prefWidth="800.0" stylesheets="@mainwindow.css">
+         <children>
+            <MenuBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="0.0" prefWidth="800.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Clientes" />
+                <Menu text="_Reservas">
+                  <items>
+                    <MenuItem fx:id="mi_habitaciones" onAction="#OnAction_mi_Habitaciones" text="_Habitaciones" />
+                        <MenuItem fx:id="mi_habana" onAction="#OnAction_mi_habana" text="_Salón Habana" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Ayuda">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox alignment="TOP_RIGHT" maxWidth="468.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="468.0">
+               <children>
+                  <Button fx:id="bt_minimizar" layoutX="780.0" layoutY="-35.0" mnemonicParsing="false" onAction="#onAction_bt_minimizar" styleClass="buttonMainWin" text="_">
+                     <HBox.margin>
+                        <Insets left="25.0" top="-38.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bt_x" mnemonicParsing="false" onAction="#onActon_bt_x" styleClass="buttonMainWin" text="X">
+                     <HBox.margin>
+                        <Insets right="10.0" top="-38.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
